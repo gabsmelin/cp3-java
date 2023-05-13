@@ -1,0 +1,73 @@
+package br.com.fiap.loja.model;
+
+public class Produto {
+	private String nome;
+	private String descricao; 
+	private int quantidade;
+	private double preco;
+	
+	
+	//metodos
+	public void descontoPadrao() {
+		if(quantidade > 10) {
+			preco = preco * 0.05;
+			System.out.println(preco);
+		} else {
+			System.out.println(preco);
+		}
+	}
+	public void descontoInfo(int porcentagem) {
+		preco = (preco*porcentagem) / 100;
+	}
+	public void descontoCupom(String cupom) {
+		if(cupom == "BEMVINDO") {
+			preco -= preco * 0.4;
+			System.out.println(preco);
+		} else if(cupom == "NERD") {
+			preco -= preco * 0.2;
+			System.out.println(preco);
+		} else {
+			System.out.println("Esse cupom não existe.");
+		}
+	}
+	public void exibirInfo(String nome, String descricao, int quantidade, double preco) {
+		
+	}
+	
+	
+	
+	//construtores
+	public Produto(String nome, String descricao, int quantidade, double preco) {
+		super();
+		this.nome = nome;
+		this.descricao = descricao;
+		this.quantidade = quantidade;
+		this.preco = preco;
+	}
+	
+	//getters and setters
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	public String getDescricao() {
+		return descricao;
+	}
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+	public int getQuantidade() {
+		return quantidade;
+	}
+	public void setQuantidade(int quantidade) {
+		this.quantidade = quantidade;
+	}
+	public double getPreco() {
+		return preco;
+	}
+	public void setPreco(double preco) {
+		this.preco = preco;
+	}
+}

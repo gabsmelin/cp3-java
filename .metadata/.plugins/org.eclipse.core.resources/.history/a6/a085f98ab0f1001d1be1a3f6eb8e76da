@@ -1,0 +1,8 @@
+package br.com.fiap.loja.view;
+import br.com.fiap.loja.model.*;
+
+public class Terminal {
+	public static void main(String[] args) {
+		
+	}
+}

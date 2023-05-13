@@ -1,0 +1,13 @@
+package br.com.fiap.loja.view;
+import br.com.fiap.loja.model.*;
+
+public class Terminal {
+	public static void main(String[] args) {
+		Livro monica = new Livro("Diário de um banana", "Livro do DB, um mlk esquisito", 10, 100.0, "Kley", "BananaKong");
+		//int qtd = monica.getQuantidade();
+		monica.descontoPadrao();
+		monica.descontoInfo(20);
+		monica.descontoCupom("ioi");
+		//monica.descontoCupom("NERD");
+	}
+}

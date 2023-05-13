@@ -1,0 +1,4 @@
+package br.com.fiap.loja.model;
+
+public class Eletronicos extends Produto {
+}
